@@ -5,6 +5,7 @@
 # -Age : 26
 # -Skills : Python - HTML - CSS - C
 # -instagram : @ddos_attack_co
+# -Email : djaafardjaafarlolo@gmail.com
 # ------------Fallowed Me for instagram-------
 
 # import OpenCV library
