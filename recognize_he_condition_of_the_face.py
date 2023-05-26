@@ -1,6 +1,21 @@
+# ----------------Info Developer-------------
+# -Last Name : Lecheheb
+# -First Name : Djaafar
+# -Country : Algeria
+# -Age : 26
+# -Skills : Python - HTML - CSS - C
+# -instagram : @ddos_attack_co
+# ------------Fallowed Me for instagram-------
+
+# import OpenCV library
 import cv2
+
+# import Keras library
 from keras.models import load_model
+
+# import NumPy library
 import numpy as np
+
 import os
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -19,19 +34,6 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # تهيئة كاميرا الكمبيوتر
 video = cv2.VideoCapture(0)
 i=0
-# تكوين كاميرا الكمبيوتر
-camera = cv2.VideoCapture(0)
-# حجم الإطار
-frame_width = int(camera.get(cv2.CAP_PROP_FRAME_WIDTH))
-frame_height = int(camera.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
-# إعداد نافذة النص
-text_window_height = 50
-text_color = (0, 255, 0)  # اللون الأخضر
-text_font = cv2.FONT_HERSHEY_SIMPLEX
-text_scale = 1
-text_thickness = 2
-
 while True:
     # قراءة إطار الكاميرا
     ret, frame = video.read()
@@ -74,10 +76,6 @@ while True:
     
     # عرض الإطار المعالج
     cv2.imshow('Project Djaafar Lecheheb', frame)
-    # إنشاء نافذة النص وكتابة النص في أسفل الإطار
-    text_window = np.zeros((text_window_height, frame_width, 3), dtype=np.uint8)
-    cv2.putText(text_window, 'Lecheheb Djaafar Devleoer Engenyor', (10, 30), text_font, text_scale, text_color, text_thickness)
-    
     # انتظار الضغط على مفتاح ESC للخروج
     if cv2.waitKey(1) == 27:
         break
